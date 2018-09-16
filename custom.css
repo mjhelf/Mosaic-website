@@ -76,15 +76,23 @@ border-width: 0px;
   margin: auto;
   }
 
-  .carousel-caption {
+  .carousel-caption,
+  .carousel-control {
     display: none;
 }
 
-.carousel:hover  .carousel-caption {
+.carousel:hover  .carousel-caption,
+.carousel:hover .carousel-control {
 display: block;
   background: rgba(0, 0, 0, 0.35);
 }
 
+
+.carousel:hover .carousel-control {
+display: block;
+background: rgba(0, 0, 0, 0.0);
+
+}
 
 
 
