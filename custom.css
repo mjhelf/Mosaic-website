@@ -109,6 +109,7 @@ html, body { height: 100%; }
 
 
 
+
 .bottomHolder {
   position: absolute;
   text-align: center;
@@ -126,6 +127,25 @@ html, body { height: 100%; }
   text-align: center;
   font-size: 14pt;
   font-weight: bold;
+}
+
+.panel-default{
+  border-color: #404040;
+
+}
+
+.panel-heading.red-heading{
+  background-color: #C41230;
+  color: #ffffff;
+  border-color: #C41230;
+  text-align: center;
+  font-size: 14pt;
+  font-weight: bold;
+}
+
+.release-date{
+  text-align: right;
+  font-size: 11pt;
 }
 
 .btn-default{
