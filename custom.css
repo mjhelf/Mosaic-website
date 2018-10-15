@@ -134,6 +134,12 @@ html, body { height: 100%; }
 
 }
 
+.container.fullwidth {
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .panel-heading.red-heading{
   background-color: #C41230;
   color: #ffffff;
