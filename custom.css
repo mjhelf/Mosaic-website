@@ -131,7 +131,7 @@ html, body { height: 100%; }
 
 .panel-default{
   border-color: #404040;
-
+margin-bottom: 10px;
 }
 
 .container.fullwidth {
