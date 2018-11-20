@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-125810379-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-125810379-1');
+</script>
+
+  <title>MOSAiC</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" href="../../custom.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container fullwidth">
+
+        <div class="panel panel-default">
+            <div class="panel-heading">You are using MOSAiC version 0.8.3 (Pre-release!)</div>
+          </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">Update Log</div>
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-heading red-heading">This is Version 0.8.3</div>
+            <div class="panel-body">
+              <p class="release-date">Last changed 2018-11-20</p>
+              <h3>New features:</h3>
+              <ul>
+                  <li>MS2 Browser: Added button to find all MS2 scans for features in Feature Table (results are added to Feature Table)</li>
+                  
+                </ul> 
+              <h3>Bug fixes:</h3>
+              <ul>
+                  <li>Fixed crashing issue when filtering for strings in columns of the Feature Table</li>
+                </ul> 
+
+                <h3>Coming soon:</h3>
+              <ul>
+                  <li>Saving and loading MOSAiC sessions from .mosaicXML files</li>
+              </ul> 
+            </div>
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-heading red-heading">Version 0.8.2</div>
+            <div class="panel-body">
+              <p class="release-date">Released 2018-11-09</p>
+              <h3>Usability upgrades:</h3>
+              <ul>
+                  <li>xcms analysis saves a version of the resulting feature tables now before applying (potentially very time-consuming) post-processing (e.g. peak shapes analysis)</li>
+                  <li>Molecular formula prediction on any peak in any spectrum (select "spectrum" as source in the Molecular Formula tab, optionally select "Calculate automatically" and SHIFT + click on a peak in any MS1 or MS2 spectrum). NOTE: currently will use the marker on the last spectrum that the cursor was moved over, not necessarily the last marker that was set.</li>
+                  <li>Export individual spectra as .pdf or .tsv (tab-separated peak list)</li>
+                  <li>Rescale EICs to the maximum intensity across all EIC groups in Grouped EICs tab ("Rescale" checkbox)</li>
+
+
+                </ul> 
+              <h3>Bug fixes:</h3>
+              <ul>
+                  <li>Comments column now gets imported correctly when loading a table with an all-empty comments column</li>
+                  <li>MOSAiC no longer crashes when folder selection is canceled in XCMS module</li>
+                  <li>Fixed problem with MS browser when only a single MS data file was loaded</li>
+                </ul> 
+
+                <h3>Coming soon:</h3>
+              <ul>
+                  <li>Saving and loading MOSAiC sessions from .mosaicXML files</li>
+              </ul> 
+            </div>
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-heading red-heading">Version 0.8.1</div>
+            <div class="panel-body">
+              <p class="release-date">Released 2018-10-18</p>
+              <h3>Bug fixes:</h3>
+              <ul>
+                  <li>MOSAiC no longer crashes when switching Feature Tables when certain filters are selected</li>
+                  <li>The columns that can be selected for filtering are now updated when new columns are added to a Feature Table</li>
+                  <li>When entering filter values, the input field is no longer automatically deselected</li>
+                </ul> 
+            </div>
+          </div>
+    <div class="panel panel-default">
+        <div class="panel-heading red-heading">Version 0.8.0</div>
+        <div class="panel-body">
+          <p class="release-date">Released 2018-10-15</p>
+          <h3>New in this version:</h3>
+          <ul>
+              <li>New start page with update news and quick access to data loading opotions</li>
+              <li>Option to show small EIC plots</li>
+              <li>Feature Table selection remains highlighted when clicking elsewhere in the program</li>
+              <li>When a project folder is selected, Feature Tables can be saved there directly</li>
+              <li>Complete internal do-over that should improve performance and future expansion</li>
+            </ul> 
+            <strong>Note:</strong> There are currently problems when loading data in Firefox - please use a different browser (Chrome, Safari...) until this has been fixed.
+        </div>
+      </div>
+</div>
+</body>
+</html> 
