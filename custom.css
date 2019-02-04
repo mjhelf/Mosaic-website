@@ -37,7 +37,7 @@ border-width: 0px;
   color: #ffffff;
 }
 .navbar-inverse .navbar-nav > li > a:hover {
-  background-color:#595959;
+  background-color:#404040;
 }
 .navbar-inverse .navbar-nav > li > a:focus {
   background-color:#404040;
