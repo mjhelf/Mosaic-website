@@ -29,9 +29,9 @@
             </div>
 
             <div class="panel panel-default">
-              <div class="panel-heading red-heading">Version 0.8.7</div>
+              <div class="panel-heading red-heading">Version 0.9.0</div>
               <div class="panel-body">
-                <p class="release-date">Last changed 2018-02-06</p>
+                <p class="release-date">Last changed 2018-03-12</p>
 
 
               <h3>New features:</h3>
@@ -41,12 +41,18 @@
                     <li>Added option to see retention time in minutes (in Table Filter box)</li>
                     <li>MS2 scan search can now be set to only match MS2 scans with the feature with closest RT (within tolerance), instead of all features within RT tolerance. </li>  
                    <li>Additional options to simplify networks (can now use two conditions for edge merging concurrently)</li>
+                   <li>Freestyle data plotting in quickplots now applies active filters to the feature table items before plotting. Also increased limit for interactive plots from 1000 to 2000 data points.</li>
+                   <li>Changed and improved peak picking algorithm</li>
+                   <li>Added option to get peak intensities for tables with mz and rt values</li>
+                   <li>New "Fast peak shapes" analysis option is orders of magnitude faster than the older version</li>
 
                   </ul> 
                 <h3>Bug fixes:</h3>
                 <ul>
                  <li>Fixed issue with saving tables that contain commas (e.g. in comments) and improved speed of saving tables </li>
                  <li>Tables no longer "wrap around" (which led to going back to row one when hitting the bottom of a table page) </li>
+                 <li>Fixed bug in Network viewer that caused the plot to frequently crash in overview mode</li>
+                 <li>Old/slow peak shapes analysis is now faster than it used to be thanks to multithreading</li>
 
                   </ul>  
                  
