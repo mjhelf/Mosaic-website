@@ -32,6 +32,68 @@
             </div>
 
             <div class="panel panel-default">
+              <div class="panel-heading red-heading">Version 0.9.0</div>
+              <div class="panel-body">
+                <p class="release-date">Last changed 2018-03-14</p>
+
+                <h3>Notes:</h3>
+                <ul>
+                <li>This version can be installed in parallel with older versions even when using the Windows installer</li>
+                <li>You cannot use the integrated updater to go from version 0.8.X to 0.9.X. Get the new Windows version <a href = "https://github.com/mjhelf/METABOseek/releases/tag/v0.9.0" target = "_blank">here</a> </li> 
+                <li>Linux/ MacOS users can update using this command: <code>source("http://metaboseek.com/files/install_METABOseek.R")</code> </li> 
+
+                <li>It is recommended to use Chrome as a browser. There are issues with Firefox when loading data into METABOseek</li>
+                </ul>
+
+              <h3>New features:</h3>
+                <ul>
+                    <li>Added SIRIUS analysis module</li>  
+                    <li>Added option to change filename before saving tables</li>
+                    <li>Added option to see retention time in minutes (in Table Filter box)</li>
+                    <li>MS2 scan search can now be set to only match MS2 scans with the feature with closest RT (within tolerance), instead of all features within RT tolerance. </li>  
+                   <li>Additional options to simplify networks (can now use two conditions for edge merging concurrently)</li>
+                   <li>Freestyle data plotting in quickplots now applies active filters to the feature table items before plotting. Also increased limit for interactive plots from 1000 to 2000 data points.</li>
+                   <li>Changed and improved peak picking algorithm</li>
+                   <li>Added option to get peak intensities for tables with mz and rt values</li>
+                   <li>New "Fast peak shapes" analysis option is orders of magnitude faster than the older version</li>
+
+                  </ul> 
+                <h3>Bug fixes:</h3>
+                <ul>
+                 <li>Fixed issue with saving tables that contain commas (e.g. in comments) and improved speed of saving tables </li>
+                 <li>Tables no longer "wrap around" (which led to going back to row one when hitting the bottom of a table page) </li>
+                 <li>Fixed bug in Network viewer that caused the plot to frequently crash in overview mode</li>
+                 <li>Old/slow peak shapes analysis is now faster than it used to be thanks to multithreading</li>
+
+                  </ul>  
+                 
+              </div>
+            </div>
+
+            <div class="panel panel-default">
+              <div class="panel-heading red-heading">Version 0.8.6</div>
+              <div class="panel-body">
+                <p class="release-date">Last changed 2018-02-19</p>
+
+
+              <h3>New features:</h3>
+                <ul>
+                    <li>Added m/z calculator to Analyze Table Tab: Calculate m/z of different charge states for molecular formulas</li>  
+                    <li>mzMatch function added to Analyze Table Tab: Find m/z values in Feature table that match compunds in a database </li>  
+                    <li>METABOseek options are no longer reset when updating through the internal updater</li>  
+                    <li>Changes to welcome page layout</li>  
+                    
+                  </ul> 
+                <h3>Bug fixes:</h3>
+                <ul>
+                 <li>Fixed rescaling and performance issue in multi EIC Tab when using MS data layouts for subsets of MS data files</li>
+
+                  </ul>  
+                 
+              </div>
+            </div>
+  
+            <div class="panel panel-default">
               <div class="panel-heading red-heading">Version 0.8.5</div>
               <div class="panel-body">
                 <p class="release-date">Last changed 2018-02-01</p>
