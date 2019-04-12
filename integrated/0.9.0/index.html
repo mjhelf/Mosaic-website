@@ -29,68 +29,104 @@
             </div>
 
             <div class="panel panel-default">
-                <div class="panel-heading red-heading">Version 0.9.1</div>
-                <div class="panel-body">
-                  <p class="release-date">Last changed 2018-03-25</p>
-  
-                  <h3>Notes:</h3>
-                  <ul>
-                      <li>Windows users: do not use the integrated updater to update to version 0.9.1. Get the newest Windows version <a href = "https://github.com/mjhelf/METABOseek/releases" target = "_blank">here</a> </li> </li>
-  
-                          <li>It is recommended to use Chrome as a browser. There are issues with Firefox when loading data into METABOseek</li>
-                  </ul>
-  
-           
-                  <h3>Bug fixes:</h3>
-                  <ul>
-                   <li>Sorting MS2 scan list table now works as it should </li>
-                   <li>Fixed errors occuring when using the peak picking module </li>
-                   <li>Internal update module is now less likely to cause problems when updating METABOseek</li>
-                   <li>Undefined page number in Feature Table (e.g. deleting page number before entering a new one) no longer crashes METABOseek </li>
-  
-                    </ul>  
-                   
-                </div>
-              </div>
-  
-              <div class="panel panel-default">
-                <div class="panel-heading red-heading">Version 0.9.0</div>
-                <div class="panel-body">
-                  <p class="release-date">Last changed 2018-03-14</p>
-  
-                  <h3>Notes:</h3>
-                  <ul>
-                  <li>This version can be installed in parallel with older versions even when using the Windows installer</li>
-                  <li>You cannot use the integrated updater to go from version 0.8.X to 0.9.X. Get the new Windows version <a href = "https://github.com/mjhelf/METABOseek/releases" target = "_blank">here</a> </li> 
-                  <li>Linux/ MacOS users can update using this command: <code>source("http://metaboseek.com/files/install_METABOseek.R")</code> </li> 
-  
-                  <li>It is recommended to use Chrome as a browser. There are issues with Firefox when loading data into METABOseek</li>
-                  </ul>
-  
+              <div class="panel-heading red-heading">Version 0.9.2</div>
+              <div class="panel-body">
+                <p class="release-date">Last changed 2018-04-09</p>
+
+                <h3>Notes:</h3>
+                <ul>
+                    <li>Windows users: do not use the integrated updater to update to version 0.9.2. Get the newest Windows version <a href = "https://github.com/mjhelf/METABOseek/releases" target = "_blank">here</a> </li> </li>
+
+                        <li>It is recommended to use Chrome as a browser. There are issues with Firefox when loading data into METABOseek</li>
+                </ul>
                 <h3>New features:</h3>
+                <ul>
+                    <li>Secondary grouping to MS data views, allowing to color EIC traces by custom groups instead of by file</li>  
+                    <li>Recently used project folders can be loaded quickly without browsing for them</li>
+                    <li>Additional EIC plotting options: raise EIC (makes 0 intensity scans visible in EICs), relative Intensities (which shows % relative intensity instead of absolute values on y-axis) </li>
+                    <li>New FeatureReport module in MS2Browser, allowing to make one-page summaries on a molecular feature with EICs, MS1 and MS2 scans plus SIRIUS fragmentation tree and fragment annotation</li>  
+                    <li>Feature Table can be exported as inclusion or exclusion list for Thermo QE(-HF) instruments</li>  
+
+                  </ul>
+                  <h3>Improvements:</h3>
                   <ul>
-                      <li>Added SIRIUS analysis module</li>  
-                      <li>Added option to change filename before saving tables</li>
-                      <li>Added option to see retention time in minutes (in Table Filter box)</li>
-                      <li>MS2 scan search can now be set to only match MS2 scans with the feature with closest RT (within tolerance), instead of all features within RT tolerance. </li>  
-                     <li>Additional options to simplify networks (can now use two conditions for edge merging concurrently)</li>
-                     <li>Freestyle data plotting in quickplots now applies active filters to the feature table items before plotting. Also increased limit for interactive plots from 1000 to 2000 data points.</li>
-                     <li>Changed and improved peak picking algorithm</li>
-                     <li>Added option to get peak intensities for tables with mz and rt values</li>
-                     <li>New "Fast peak shapes" analysis option is orders of magnitude faster than the older version</li>
-  
-                    </ul> 
-                  <h3>Bug fixes:</h3>
-                  <ul>
-                   <li>Fixed issue with saving tables that contain commas (e.g. in comments) and improved speed of saving tables </li>
-                   <li>Tables no longer "wrap around" (which led to going back to row one when hitting the bottom of a table page) </li>
-                   <li>Fixed bug in Network viewer that caused the plot to frequently crash in overview mode</li>
-                   <li>Old/slow peak shapes analysis is now faster than it used to be thanks to multithreading</li>
-  
-                    </ul>  
-                   
-                </div>
+                      <li>SIRIUS module UI changed and shows more results for fragmentation trees</li>                        
+                      <li>MS2Browser UI changed, increased size of Network visualization</li>  
+
+                    </ul>
+         
+                <h3>Bug fixes:</h3>
+                <ul>
+                 <li>Comments made right before filtering the feature table are no longer ignored by filters </li>
+
+                  </ul>  
+                 
               </div>
+            </div>
+
+            <div class="panel panel-default">
+              <div class="panel-heading red-heading">Version 0.9.1</div>
+              <div class="panel-body">
+                <p class="release-date">Last changed 2018-03-25</p>
+
+                <h3>Notes:</h3>
+                <ul>
+                    <li>Windows users: do not use the integrated updater to update to version 0.9.1. Get the newest Windows version <a href = "https://github.com/mjhelf/METABOseek/releases" target = "_blank">here</a> </li> </li>
+
+                        <li>It is recommended to use Chrome as a browser. There are issues with Firefox when loading data into METABOseek</li>
+                </ul>
+
+         
+                <h3>Bug fixes:</h3>
+                <ul>
+                 <li>Sorting MS2 scan list table now works as it should </li>
+                 <li>Fixed errors occuring when using the peak picking module </li>
+                 <li>Internal update module is now less likely to cause problems when updating METABOseek</li>
+                 <li>Undefined page number in Feature Table (e.g. deleting page number before entering a new one) no longer crashes METABOseek </li>
+
+                  </ul>  
+                 
+              </div>
+            </div>
+
+            <div class="panel panel-default">
+              <div class="panel-heading red-heading">Version 0.9.0</div>
+              <div class="panel-body">
+                <p class="release-date">Last changed 2018-03-14</p>
+
+                <h3>Notes:</h3>
+                <ul>
+                <li>This version can be installed in parallel with older versions even when using the Windows installer</li>
+                <li>You cannot use the integrated updater to go from version 0.8.X to 0.9.X. Get the new Windows version <a href = "https://github.com/mjhelf/METABOseek/releases" target = "_blank">here</a> </li> 
+                <li>Linux/ MacOS users can update using this command: <code>source("http://metaboseek.com/files/install_METABOseek.R")</code> </li> 
+
+                <li>It is recommended to use Chrome as a browser. There are issues with Firefox when loading data into METABOseek</li>
+                </ul>
+
+              <h3>New features:</h3>
+                <ul>
+                    <li>Added SIRIUS analysis module</li>  
+                    <li>Added option to change filename before saving tables</li>
+                    <li>Added option to see retention time in minutes (in Table Filter box)</li>
+                    <li>MS2 scan search can now be set to only match MS2 scans with the feature with closest RT (within tolerance), instead of all features within RT tolerance. </li>  
+                   <li>Additional options to simplify networks (can now use two conditions for edge merging concurrently)</li>
+                   <li>Freestyle data plotting in quickplots now applies active filters to the feature table items before plotting. Also increased limit for interactive plots from 1000 to 2000 data points.</li>
+                   <li>Changed and improved peak picking algorithm</li>
+                   <li>Added option to get peak intensities for tables with mz and rt values</li>
+                   <li>New "Fast peak shapes" analysis option is orders of magnitude faster than the older version</li>
+
+                  </ul> 
+                <h3>Bug fixes:</h3>
+                <ul>
+                 <li>Fixed issue with saving tables that contain commas (e.g. in comments) and improved speed of saving tables </li>
+                 <li>Tables no longer "wrap around" (which led to going back to row one when hitting the bottom of a table page) </li>
+                 <li>Fixed bug in Network viewer that caused the plot to frequently crash in overview mode</li>
+                 <li>Old/slow peak shapes analysis is now faster than it used to be thanks to multithreading</li>
+
+                  </ul>  
+                 
+              </div>
+            </div>
 
             <div class="panel panel-default">
               <div class="panel-heading red-heading">Version 0.8.6</div>
