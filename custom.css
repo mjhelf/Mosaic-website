@@ -24,14 +24,15 @@ border-width: 0px;
 .navbar-inverse .navbar-brand {
   color: #ffffff;
   font-size: 18pt;
+  padding: 10px;
 }
-/*
+
 .navbar-inverse .navbar-brand:hover,
 .navbar-inverse .navbar-brand:focus {
   color: #ffffff;
-  background-color:#595959;
+  background-color:#404040;
 }
-*/
+
 /* Link */
 .navbar-inverse .navbar-nav > li > a {
   color: #ffffff;
@@ -59,6 +60,8 @@ border-width: 0px;
 .jumbotron{
   background-color: #ffffff;
   margin: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .item {
@@ -79,6 +82,10 @@ border-width: 0px;
   .carousel-caption,
   .carousel-control {
     display: none;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding-top: 10px;
 }
 
 .carousel:hover  .carousel-caption,
@@ -94,9 +101,17 @@ background: rgba(0, 0, 0, 0.0);
 
 }
 
+.carousel-indicators li{
+    border:1px solid #C41230;
+}
 
+.carousel-indicators {
+        bottom: 10px;
+}
 
-
+.carousel-indicators .active{
+    background-color:#404040;
+}
 
 
 html, body { height: 100%; }

@@ -1,3 +1,4 @@
+library(magrittr)
 #rebuild news for all versions:
 top <- readLines("./news/top")
 news <- readLines(system.file("NEWS.html", package = "Metaboseek"))
@@ -18,14 +19,21 @@ lapply(folders, function(x){
     file.copy("./news/index.html",file.path(x,"index.html"),overwrite = TRUE)
     })
 
-#Put news on download site
+
+
+
+
+
+#update news on download site
 news <- readLines(system.file("NEWS.html", package = "Metaboseek"))
 newsinsert <-  news[grep('<!-- START INSERT -->',news):grep('<!-- END INSERT -->',news)]
-download <- readLines('download.html')
+download <- readLines('download/index.html')
 new_download <- c(download[1:(grep('<!-- START INSERT -->',download)-1)],
                   newsinsert,
                   download[(grep('<!-- END INSERT -->',download)+1):length(download)])
-writeLines(new_download,"download.html")
+#writeLines(new_download,"download.html")
+writeLines(new_download,"download/index.html")
+
 
 #update the install_Metaboseek script
 file.copy(system.file("scripts/install_Metaboseek.R", package = "Metaboseek"),
