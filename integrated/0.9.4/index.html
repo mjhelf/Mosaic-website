@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -11,7 +11,7 @@
   gtag('config', 'UA-125810379-2');
 </script>
 
-  <title>METABOseek</title>
+  <title>Metaboseek</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -23,9 +23,44 @@
 <body>
     <div class="container fullwidth">
 
-
+<!-- START INSERT -->
           <div class="panel panel-default">
               <div class="panel-heading">Update Log</div>
+            </div>
+            
+             <div class="panel panel-default">
+              <div class="panel-heading red-heading">Version 0.9.5</div>
+              <div class="panel-body">
+                <p class="release-date">Last changed 2018-08-04</p>
+
+                <h3>Notes:</h3>
+                <ul>
+                    <li>The name of the package and the repository is now Metaboseek (previously: METABOseek).</li>
+                    <li>Folder selection dialog for xcms analysis when using Windows has been changed to match other folder selection dialogs and is now the same as when using Linux or Mac OS.</li>
+                    <li>Spectrum averaging is now done using the MassTools::mergeMS() function in all instances (slightly different averaging results than before). Spectrum comparison functions (for molecular networking) have been modified and moved to the MassTools package</li>
+                    <li>Get the newest Windows version <a href = "https://github.com/mjhelf/METABOseek/releases" target = "_blank">here</a> </li>
+                </ul>
+                <h3>New features:</h3>
+                <ul>
+                    <li>Metaboseek is now available as a <a href = "https://hub.docker.com/r/mjhelf/metaboseek" target = "_blank">Docker module</a>, making it easy to install it on desktops or servers as a webservice to showcase your data. More information available in the Metaboseek documentation.</li>
+                  </ul>
+                  <h3>Improvements:</h3>
+                  <ul>
+                      <li>More options for node coloring in networking module, and more consistent color scales</li>
+                      <li>Side buttons for export and molecular formula calculation added to the new Spectrum viewer module</li>
+                      <li>Added more user friendly selection options for xcms output files in the xcms module</li>
+                      <li>xcms runs now save SessionInfo (listing the versions of all packages loaded during the xcms analysis to help with reproducibility)</li>
+
+                    </ul>
+                    <h3>Bug fixes</h3>
+                  <ul>
+                      <li>Major bug fixed: When adding comments to a table, switching to a different table immediately afterwards no longer overrides rows of the newly selected table.</li>
+                      <li>Changing control group in pre-processing in xcms no longer causes Metaboseek to get stuck</li>
+                      <li>Selecting folders without MS data files in xcms module no longer causes Metaboseek to crash</li>
+
+                    </ul>
+                 
+              </div>
             </div>
             
              <div class="panel panel-default">
@@ -349,6 +384,8 @@
             <strong>Note:</strong> There are currently problems when loading data in Firefox - please use a different browser (Chrome, Safari...) until this has been fixed.
         </div>
       </div>
+<!-- END INSERT -->
+
 </div>
 </body>
-</html> 
+</html>
