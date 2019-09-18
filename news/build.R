@@ -40,13 +40,13 @@ file.copy(system.file("scripts/install_Metaboseek.R", package = "Metaboseek"),
           file.path("files/install_Metaboseek.R"), overwrite = TRUE)
 
 
-#Build documentation based on latest master version:
-download.file("https://raw.githubusercontent.com/mjhelf/METABOseek/master/vignettes/Getting_Started.Rmd",
-              "./doc/temp.Rmd")
-
-# #Build documentation based on latest devel_raw version:
-# download.file("https://raw.githubusercontent.com/mjhelf/METABOseek/devel_raw/vignettes/Getting_Started.Rmd",
+# #Build documentation based on latest master version:
+# download.file("https://raw.githubusercontent.com/mjhelf/METABOseek/master/vignettes/Getting_Started.Rmd",
 #               "./doc/temp.Rmd")
+
+#Build documentation based on latest devel_raw version:
+download.file("https://raw.githubusercontent.com/mjhelf/METABOseek/devel_raw/vignettes/Getting_Started.Rmd",
+              "./doc/temp.Rmd")
 
 #note: images, etc have to be placed in ./doc folder manually
 library(rmarkdown)
