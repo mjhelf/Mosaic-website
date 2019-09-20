@@ -309,14 +309,24 @@ div.tocify {
 <p>Consider getting the <a href="#Docker">Metaboseek Docker image</a>, or follow these steps to install Metaboseek:</p>
 <ol style="list-style-type: decimal">
 <li><a href="https://cloud.r-project.org/" target="_blank">Download</a>.</li>
-<li>Mac users: Get <a href="https://itunes.apple.com/us/app/xcode/id497799835?mt=12" target="_blank">Xcode</a>.</li>
-<li>Run R, enter this line:</li>
+<li><p>Mac users: Get Xcode by entering this line into your <code>Terminal</code> window:</p>
+<pre><code>xcode-select --install</code></pre>
+Follow the instructions. This will install parts of Xcode that are required to install Metaboseek.</li>
+<li><p>Run R, enter this line:</p></li>
 </ol>
 <pre class="r"><code>source(&quot;http://metaboseek.com/files/install_Metaboseek.R&quot;) </code></pre>
+<ul>
+<li>If there is an error during installation, try to additionally install <a href="https://itunes.apple.com/us/app/xcode/id497799835?mt=12" target="_blank">Xcode</a> from the AppStore.</li>
+</ul>
 <ol start="5" style="list-style-type: decimal">
 <li>To run Metaboseek, enter this line into your R console:</li>
 </ol>
 <pre class="r"><code>Metaboseek::runMseek()</code></pre>
+<ul>
+<li><p>If Metaboseek starts up, but an unresponsive grey screen appears, there is most likely an issue related to the rcdk package and Java). Restart R and enter this line:</p>
+<pre><code>remove.packages('rcdk')</code></pre>
+<p>Then try to run Metaboseek again.</p></li>
+</ul>
 </div>
 <div id="Docker" class="section level2">
 <h2><span class="header-section-number">1.4</span> Get the Docker image</h2>
