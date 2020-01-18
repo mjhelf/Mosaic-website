@@ -436,6 +436,21 @@ devtools::install_github(&quot;mjhelf/Metaboseek&quot;)</code></pre>
 <div id="options-box" class="section level3">
 <h3><span class="header-section-number">2.3.1</span> Options box</h3>
 <p>This box provides a number of optional functionality, including setting up SIRIUS, calculating molecular formulas and controling the appearance of extracted ion chromatograms (EICs) in the <code>Data Viewer</code> box.</p>
+<div id="sirius-options" class="section level4">
+<h4><span class="header-section-number">2.3.1.1</span> Sirius options</h4>
+</div>
+<div id="molecular-formula-prediction" class="section level4">
+<h4><span class="header-section-number">2.3.1.2</span> Molecular formula prediction</h4>
+</div>
+<div id="rt-correction" class="section level4">
+<h4><span class="header-section-number">2.3.1.3</span> RT correction</h4>
+</div>
+<div id="mass-shifts" class="section level4">
+<h4><span class="header-section-number">2.3.1.4</span> Mass shifts</h4>
+</div>
+<div id="eic-options" class="section level4">
+<h4><span class="header-section-number">2.3.1.5</span> EIC options</h4>
+</div>
 </div>
 <div id="data-viewer" class="section level3">
 <h3><span class="header-section-number">2.3.2</span> Data Viewer</h3>
@@ -450,7 +465,7 @@ devtools::install_github(&quot;mjhelf/Metaboseek&quot;)</code></pre>
 <p>You can move nodes by dragging them with your mouse while holding the <code>CTRL</code> key (this helps make all labels visible in a dense network). Return back to the network overview by double clicking on the graph. If double-clicking does not work, you can also zoom out by clicking while holding the <code>Z</code> key.</p>
 <div id="get-structure-predictions-with-sirius" class="section level5">
 <h5><span class="header-section-number">2.3.2.1.1</span> Get structure predictions with SIRIUS</h5>
-<p><a href="https://bio.informatik.uni-jena.de/software/sirius/">SIRIUS</a> is a stand-alone software developed in the Boecker lab at the University of Jena that can use MS/MS data to predict the molecular formulas of fragment and parent ion peaks. It also offers an interface to CSI:FingerID to match fragmentation patterns with structure databases.</p>
+<p><a href="https://bio.informatik.uni-jena.de/software/sirius/">SIRIUS</a> (<span class="citation">Dührkop et al. (2019)</span>) is a stand-alone software developed in the Boecker lab at the University of Jena that can use MS/MS data to predict the molecular formulas of fragment and parent ion peaks. It also offers an interface to CSI:FingerID to match fragmentation patterns with structure databases.</p>
 <p>MS2 data can be analyzed with SIRIUS from inside the Metaboseek app. For this to work, you first need to tell Metaboseek where the SIRIUS executable is located. Click on the “Global settings for Metaboseek” button at the top of the app (gear symbol, next to the “Open…” button). Select the SIRIUS folder. Metaboseek will generate a new folder there to store results from Sirius runs.</p>
 <p>To run Sirius, use the “Run SIRIUS” Button above the MS2 scan table. Make sure to select appropriate options in the “Sirius options” section at the top of the app (Options box). The results can be accessed through Metaboseek as soon as a Sirius analysis run finishes by clicking “Show SIRIUS”. Select items in the tables that show up to view fragmentation trees and proposed structures.</p>
 </div>
@@ -460,6 +475,24 @@ devtools::install_github(&quot;mjhelf/Metaboseek&quot;)</code></pre>
 <p>MS/MS spectra are shown on the right side. You can choose to <code>keep</code> a spectrum view - it will then not be overridden when you select a new <code>Feature table</code> entry or network node. You can show up to 5 spectrum views at the same time. By default, all peaks that occur in more than one of the shown spectra are highlighted in blue. You can disable this comparison with the <code>Compare</code> checkbox. You can also download the shown spectrum views in .pdf format by clicking <code>Download spectra</code>.</p>
 </div>
 </div>
+<div id="pca-viewer" class="section level4">
+<h4><span class="header-section-number">2.3.2.2</span> PCA Viewer</h4>
+</div>
+<div id="venn-diagrams" class="section level4">
+<h4><span class="header-section-number">2.3.2.3</span> Venn Diagrams</h4>
+</div>
+<div id="quickplots" class="section level4">
+<h4><span class="header-section-number">2.3.2.4</span> Quickplots</h4>
+</div>
+<div id="ms-browser" class="section level4">
+<h4><span class="header-section-number">2.3.2.5</span> MS Browser</h4>
+</div>
+<div id="grouped-eics" class="section level4">
+<h4><span class="header-section-number">2.3.2.6</span> Grouped EICs</h4>
+</div>
+<div id="regroup-ms-data" class="section level4">
+<h4><span class="header-section-number">2.3.2.7</span> Regroup MS data</h4>
+</div>
 </div>
 <div id="feature-table" class="section level3">
 <h3><span class="header-section-number">2.3.3</span> Feature Table</h3>
@@ -468,42 +501,54 @@ devtools::install_github(&quot;mjhelf/Metaboseek&quot;)</code></pre>
 <div id="feature-table-actions" class="section level3">
 <h3><span class="header-section-number">2.3.4</span> Feature Table Actions</h3>
 <p>In this box you can run analyses on the currently selected <code>Feature Table</code> and filter it.</p>
+<div id="filter-table" class="section level4">
+<h4><span class="header-section-number">2.3.4.1</span> Filter Table</h4>
+</div>
 <div id="analyze-table" class="section level4">
-<h4><span class="header-section-number">2.3.4.1</span> Analyze Table</h4>
+<h4><span class="header-section-number">2.3.4.2</span> Analyze Table</h4>
 <p>The <code>Analyze Table</code> tab is the central hub for data analysis on your <code>Feature Table</code>. Most analysis steps will generate new columns in the <code>Feature Table</code> which you can then use to filter your table to get to your features of interest. <a href="#columnExplain">See below</a> for a guide to the columns generated by the analysis steps.</p>
 <div id="analysis-options" class="section level5">
-<h5><span class="header-section-number">2.3.4.1.1</span> Analysis options</h5>
+<h5><span class="header-section-number">2.3.4.2.1</span> Analysis options</h5>
+<p>For more in-depth information on the underlying functions in <code>R</code>, see <a href="https://rdrr.io/github/mjhelf/METABOseek/man/analyzeFT.html" target="_blank"> the Metaboseek::analyzeFT documentation</a>.</p>
 <ul>
 <li><p><strong>Normalize data: </strong>Select this option ONLY if the current table has not been filtered and is the result of an unbiased xcms analysis. “Normalization” will make a copy of the current intensity columns with the suffix “__norm“. In these new columns, all zero intensity values will be set to the lowest non-zero value across all sample intensity columns (assuming it represents the detection limit). Then, a normalization factor is applied so that the average intensiy of each individual column is the same and equal to the average intensity across all columns prior to normalization. <strong>If you do this on a table that has been pre-filtered, for instance containing only features that are upregulated in one sample group, this will fatally distort the data!</strong></p></li>
-<li><p><strong>Use normalized data: </strong></p></li>
-<li><p><strong>Select control group:</strong></p></li>
-<li><p><strong>Apply log10:</strong></p></li>
+<li><p><strong>Use normalized data: </strong> Use the normalized data for when running analyses that use intensity values: Basic Analysis, anova, t-test, PCA, clara cluster</p></li>
+<li><p><strong>Select control group:</strong> Select a sample group that is the control (in Basic Analysis, all sample groups are compared to this group).</p></li>
+<li><p><strong>Apply log10:</strong> When checked, will apply log10 to the “__norm columns&quot; (see above) <strong>after</strong> normalization of intensity values.</p></li>
 </ul>
 </div>
 <div id="basic-analysis" class="section level5">
-<h5><span class="header-section-number">2.3.4.1.2</span> Basic analysis</h5>
+<h5><span class="header-section-number">2.3.4.2.2</span> Basic analysis</h5>
 <ul>
 <li><p><strong>Basic analysis:</strong> Selecting this option will calculate a set of fold changes between sample groups and some summary information columns such as <code>maxint</code>. <a href="#columnLegend">See below</a> for a description of all columns generated by this analysis step.</p></li>
-<li><p><strong>clara cluster:</strong></p></li>
-<li><p><strong>anova:</strong></p></li>
-<li><p><strong>t-test:</strong></p></li>
-<li><p><strong>PCA features:</strong></p></li>
-<li><p><strong>PCA samples:</strong></p></li>
-<li><p><strong>mzMatch:</strong></p></li>
-<li><p><strong>Peak shapes:</strong></p></li>
-<li><p><strong>Fast peak shapes:</strong></p></li>
+<li><p><strong>clara cluster:</strong> cluster the feature table with cluster::clara()</p></li>
+<li><p><strong>anova:</strong> Calculate per-row one-way ANOVA between grouped columns of the feature table. NOTE: Equal variance is not assumed (uses stats::oneway.test), returns NaN in cases where one group has all equal values (no variance, e.g. if all values are 0).</p></li>
+<li><p><strong>t-test:</strong> calculate t-test between samples. Works only if there are two groups in grouping with multiple members.</p></li>
+<li><p><strong>PCA features:</strong> Perform Principal Component Analysis (PCA) of features (does not require grouping information). will add columns to the feature table.</p></li>
+<li><p><strong>PCA samples:</strong> Calculate Principal Component Analysis to cluster samples based on the intensity columns (does not require grouping information). sample PCA information is not stored in the viewable feature table, but is saved as part of an .mskFT file.</p></li>
+<li><p><strong>mzMatch: </strong> Match the m/z values of your featureTable to a list of known compounds. Note that these matches based on MS1 data alone are ambiguous. Will generate multiple columns in the <code>Feature Table</code>, as described <a href="#columnLegend">below</a>.</p></li>
+<li><p><strong>Peak shapes:</strong> Tries to match the EIC for each feature in each sample to a curve and calculates a fit score between 0 (no fit) and 1 (best fit).</p></li>
+<li><p><strong>Fast peak shapes:</strong> Recommended way to score peak shapes. Tries to match the EIC for each feature in the sample with the highest intensity for each feature to a curve and calculates a fit score between 0 (no fit) and 1 (best fit). Much faster than “Peak shapes”, with equivalent or better results.</p></li>
 </ul>
 </div>
 <div id="advanced-analysis" class="section level5">
-<h5><span class="header-section-number">2.3.4.1.3</span> Advanced analysis</h5>
+<h5><span class="header-section-number">2.3.4.2.3</span> Advanced analysis</h5>
 <ul>
-<li><p><strong>Get intensities:</strong></p></li>
-<li><p><strong>Find MS2 scans:</strong></p></li>
-<li><p><strong>MS2 patterns:</strong></p></li>
-<li><p><strong>Find peaks:</strong></p></li>
-<li><p><strong>Calculate m/z:</strong></p></li>
+<li><p><strong>Get intensities:</strong> For each molecular feature, an EIC is generated across all MS files currently loaded in the MS data layout. The retention time boundaries of the EIC can be chosen to be seconds around the features retention time (rt) or around its peak boundaries as reported in the rtmin and rtmax columns of the feature table. If retention time correction information is used, the EIC retention time window is moved accordingly for each file. Intensities within this EIC range are averaged and reported for each file. Alternatively, the peak areas can be calculated instead of the average intensities, leading to results that are more easily comparable to xcms-based intensities.</p></li>
+<li><p><strong>Find MS2 scans:</strong> Find MS2 scans corresponding to each feature in the Feature Table. Allows setting of m/z and RT tolerances, will add a column to the Feature Table with information about the scans. This column is used by the MS2 browser Module to identify feature-specific spectra for MS2 networking.</p></li>
+<li><p><strong>MS2 patterns:</strong> Allows to search for combinations of MS2 fragment peaks in all loaded MS data files.</p></li>
+<li><p><strong>Find peaks: </strong> For each m/z value in the feature table, an EIC for the full retention time range is generated, and a simple peak detection algorithm is applied to identify maxima that stand out from background noise.</p></li>
+</ul>
+<p><details> <summary>Click here for details on the peak detection algorithm</summary></p>
+<pre><code>the peakDetect() function uses a modified version of an algorithm presented by Ma et al.24 as follows:</code></pre>
+<p>For the global noise level, let $N $ be the number of EIC data points, and <span class="math inline">\(S_{i}\)</span> the intensity value of the <span class="math inline">\(i^{th}\)</span> data point. <span class="math inline">\(K\)</span> is a user definable variable. <span class="math inline">\(GlobalNoiseThreshold = (GlobalMaximum + GlobalAverage)/100 + K * Deviation\)</span> where : <span class="math inline">\(GlobalAverage = \displaystyle \frac{\sum_{i=1}^N|S_{i}|}{N}\)</span>; <span class="math inline">\(Deviation = \displaystyle \frac{\sum_{i=1}^N|S_{i} - GlobalAverage|}{N}\)</span> In addition to the global noise threshold, a local noise threshold is calculated for each data point <span class="math inline">\(S_{i}\)</span> in the EIC, using a similar equation limited to a small retention time window around <span class="math inline">\(S_{i}\)</span>. Let <span class="math inline">\(n\)</span> be the number of scans to consider for local noise level calculation in each direction, and <span class="math inline">\(noise_{i}\)</span> the local noise level for a data point in the EIC. <span class="math inline">\(noise_{i} = (LocalMaximum + LocalAverage)/2 + K * Local Deviation\)</span> <span class="math inline">\(LocalAverage = \displaystyle \frac{\sum_{i-n}^{i+n}|S_{i}|}{2n + 1}\)</span>; <span class="math inline">\(LocalDeviation = \displaystyle \frac{\sum_{i-n}^{i+n}|S_{i} - LocalAverage|}{2n + 1}\)</span> In a first step, all local maxima and their adjacent minima in an EIC are detected, and peak boundaries are defined by the two minima surrounding a maximum. Peaks are selected if their maximum is above both the local noise level at its position in the EIC and above the global noise level. If two peaks are adjacent, and the local minimum that separates them is at least 1/3 the intensity of either peak maximum, these two peaks are merged. Additional filters include selection for peaks spanning at least a given number of scans, and a factor by which a peak maximum has to be above the average intensity inside the peak boundaries. Peaks are merged between files by first matching peaks with maxima within a specified retention time window. The peak boundary and maximum position are then calculated from the weighted average boundary and maximum positions of all peaks that are matched, weighted by the maximum intensity of each peak. </details></p>
+<ul>
+<li><strong>Calculate m/z:</strong> Allows to calculate m/z values from molecular formulas that are written out in a column of the Feature Table (without charge).</li>
 </ul>
 </div>
+</div>
+<div id="regroup-table" class="section level4">
+<h4><span class="header-section-number">2.3.4.3</span> Regroup Table</h4>
 </div>
 </div>
 <div id="columnExplain" class="section level3">
@@ -518,73 +563,73 @@ devtools::install_github(&quot;mjhelf/Metaboseek&quot;)</code></pre>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><Sample>__XIC</td>
-<td align="left">Columns with intensities as calculated by Metaboseek</td>
-<td align="left">Get Intensities, xcms script,</td>
-</tr>
-<tr class="even">
-<td align="left"><Sample></td>
-<td align="left">Columns with intensities as reported by xcms</td>
-<td align="left">xcms script</td>
-</tr>
-<tr class="odd">
-<td align="left"><IntensityColumn>__norm</td>
-<td align="left">Normalized intensity values for an intensity column, typically named <Sample>__norm or <Sample>__XIC__norm; by default : (1) replaces zeros by lowest value in entire intensity dataset (assuming it represents the detection limit), (2) intensity values of each column are adjusted so that each column has the mean intensity equal to the mean intensity of the entire dataset.</td>
-<td align="left">Normalize data</td>
-</tr>
-<tr class="even">
-<td align="left">massdefppm</td>
-<td align="left">Mass defect in ppm, calculation: ((mz-floor(mz))/mz)*1e6</td>
-<td align="left">Basic analysis</td>
-</tr>
-<tr class="odd">
-<td align="left">maxint</td>
-<td align="left">Maximum intensity across all samples</td>
-<td align="left">Basic analysis</td>
-</tr>
-<tr class="even">
-<td align="left">topgroup</td>
-<td align="left">Sample group with highest mean intensity</td>
-<td align="left">Basic analysis</td>
-</tr>
-<tr class="odd">
-<td align="left">maxfold</td>
-<td align="left">Highest fold change between the mean intensities of any 2 sample groups</td>
-<td align="left">Basic analysis</td>
-</tr>
-<tr class="even">
-<td align="left">maxfoldover2</td>
-<td align="left">Fold change between the mean intensities of topgroup over group with second highest mean intensity</td>
-<td align="left">Basic analysis</td>
-</tr>
-<tr class="odd">
-<td align="left"><Group>__meanInt</td>
-<td align="left">sample group mean intensity</td>
-<td align="left">Basic analysis</td>
-</tr>
-<tr class="even">
-<td align="left"><Group>__foldOverRest</td>
-<td align="left">Fold change of the mean intensity of G1 over mean intensities of all other samples outside of G1</td>
-<td align="left">Basic analysis</td>
-</tr>
-<tr class="odd">
-<td align="left"><Group>__minFold</td>
-<td align="left">Fold change of the lowest intensity sample in G1 over the highest intensity sample of all other samples outside of G1</td>
-<td align="left">Basic analysis</td>
-</tr>
-<tr class="even">
-<td align="left"><Group>__minFoldMean</td>
-<td align="left">Fold change of the mean intensity of G1 over the highest intensity sample of all other samples outside of G1</td>
-<td align="left">Basic analysis</td>
-</tr>
-<tr class="odd">
-<td align="left"><Group>__foldOverCtrl</td>
+<td align="left">{Group}__foldOverCtrl</td>
 <td align="left">Fold change of the mean intensity of G1 over mean intensity of the control group</td>
 <td align="left">Basic analysis</td>
 </tr>
 <tr class="even">
+<td align="left">{Group}__foldOverRest</td>
+<td align="left">Fold change of the mean intensity of G1 over mean intensities of all other samples outside of G1</td>
+<td align="left">Basic analysis</td>
+</tr>
+<tr class="odd">
+<td align="left">{Group}__meanInt</td>
+<td align="left">sample group mean intensity</td>
+<td align="left">Basic analysis</td>
+</tr>
+<tr class="even">
+<td align="left">{Group}__minFold</td>
+<td align="left">Fold change of the lowest intensity sample in G1 over the highest intensity sample of all other samples outside of G1</td>
+<td align="left">Basic analysis</td>
+</tr>
+<tr class="odd">
+<td align="left">{Group}__minFoldMean</td>
+<td align="left">Fold change of the mean intensity of G1 over the highest intensity sample of all other samples outside of G1</td>
+<td align="left">Basic analysis</td>
+</tr>
+<tr class="even">
+<td align="left">{Group}__pval</td>
+<td align="left">p value between this group and all samples in all other groups, as calculated by stats::t.test()</td>
+<td align="left">t-test</td>
+</tr>
+<tr class="odd">
+<td align="left">{Group}__pval_adj</td>
+<td align="left">p values, adjusted by the “bonferroni” method using stats::p.adjust()</td>
+<td align="left">t-test</td>
+</tr>
+<tr class="even">
+<td align="left">{Group}__sdev</td>
+<td align="left">coefficient of variatioin (relative standard deviation = sd/mean) within the group</td>
+<td align="left">t-test</td>
+</tr>
+<tr class="odd">
+<td align="left">{IntensityColumn}__norm</td>
+<td align="left">Normalized intensity values for an intensity column, typically named {Sample}__norm or {Sample}__XIC__norm; by default : (1) replaces zeros by lowest value in entire intensity dataset (assuming it represents the detection limit), (2) intensity values of each column are adjusted so that each column has the mean intensity equal to the mean intensity of the entire dataset.</td>
+<td align="left">Normalize data</td>
+</tr>
+<tr class="even">
+<td align="left">{Sample}</td>
+<td align="left">Columns with intensities as reported by xcms</td>
+<td align="left">xcms script</td>
+</tr>
+<tr class="odd">
+<td align="left">{Sample}__XIC</td>
+<td align="left">Columns with intensities as calculated by Metaboseek, can have a suffix other than “_XIC&quot; if generated with the “Get intensities” button.</td>
+<td align="left">Get Intensities, xcms script,</td>
+</tr>
+<tr class="even">
+<td align="left">ANOVA__pvalue</td>
+<td align="left">per-row one-way ANOVA between grouped columns of the feature table</td>
+<td align="left">anova</td>
+</tr>
+<tr class="odd">
 <td align="left">best_minFold</td>
 <td align="left">The highest minFold value reported across all groups</td>
+<td align="left">Basic analysis</td>
+</tr>
+<tr class="even">
+<td align="left">best_minFoldCtrl</td>
+<td align="left">The highest minFoldCtrl value reported across all groups</td>
 <td align="left">Basic analysis</td>
 </tr>
 <tr class="odd">
@@ -593,8 +638,58 @@ devtools::install_github(&quot;mjhelf/Metaboseek&quot;)</code></pre>
 <td align="left">Basic analysis</td>
 </tr>
 <tr class="even">
-<td align="left">best_minFoldCtrl</td>
-<td align="left">The highest minFoldCtrl value reported across all groups</td>
+<td align="left">cluster__clara</td>
+<td align="left">listing the cluster into which each feature falls after using cluster::clara() with the selected number of clusters</td>
+<td align="left">clara cluster</td>
+</tr>
+<tr class="odd">
+<td align="left">massdefppm</td>
+<td align="left">Mass defect in ppm, calculation: ((mz-floor(mz))/mz)*1e6</td>
+<td align="left">Basic analysis</td>
+</tr>
+<tr class="even">
+<td align="left">maxfold</td>
+<td align="left">Highest fold change between the mean intensities of any 2 sample groups</td>
+<td align="left">Basic analysis</td>
+</tr>
+<tr class="odd">
+<td align="left">maxfoldover2</td>
+<td align="left">Fold change between the mean intensities of topgroup over group with second highest mean intensity</td>
+<td align="left">Basic analysis</td>
+</tr>
+<tr class="even">
+<td align="left">maxint</td>
+<td align="left">Maximum intensity across all samples</td>
+<td align="left">Basic analysis</td>
+</tr>
+<tr class="odd">
+<td align="left">MS2scans</td>
+<td align="left">Lists the MS2 scans found for each feature in the MS2 data loaded when the “Find MS2 scans” analysis was run</td>
+<td align="left">Find MS2 scans</td>
+</tr>
+<tr class="even">
+<td align="left">mzMatch_{variable}</td>
+<td align="left">All other columns from the compound list are added as well with the prefix mzMatch_.</td>
+<td align="left">mzMatch</td>
+</tr>
+<tr class="odd">
+<td align="left">mzMatchError</td>
+<td align="left">ppm error, based on difference between mz in the feature table and the mz in the compound list.</td>
+<td align="left">mzMatch</td>
+</tr>
+<tr class="even">
+<td align="left">mzMatches</td>
+<td align="left">identity of the seach hits in the selected compound lists, taken from the “id” column of the compound lists. If there are multiple hits across the selected compound lists, they will be separated by “|” within the mzMatches, mzMatchError and all mzMatch_{variable} columns.</td>
+<td align="left">mzMatch</td>
+</tr>
+<tr class="odd">
+<td align="left">PCA__#</td>
+<td align="left">Principal component coordinates for each feature (components are numbered)</td>
+<td align="left">PCA features</td>
+</tr>
+<tr class="even">
+<td align="left">topgroup</td>
+<td align="left">Sample group with highest mean intensity</td>
 <td align="left">Basic analysis</td>
 </tr>
 </tbody>
@@ -639,6 +734,14 @@ devtools::install_github(&quot;mjhelf/Metaboseek&quot;)</code></pre>
 <ul>
 <li>Note that loading settings will override your selection of MS data files. If you want to apply the settings to a new set of data files, load the settings first and then select a folder (step 1).</li>
 </ul>
+</div>
+</div>
+<div id="references" class="section level1 unnumbered">
+<h1>References</h1>
+<div id="refs" class="references">
+<div id="ref-Duhrkop2019">
+<p>Dührkop, Kai, Markus Fleischauer, Marcus Ludwig, Alexander A. Aksenov, Alexey V. Melnik, Marvin Meusel, Pieter C. Dorrestein, Juho Rousu, and Sebastian Böcker. 2019. “SIRIUS 4: a rapid tool for turning tandem mass spectra into metabolite structure information.” <em>Nature Methods</em> 16 (4): 299–302. doi:<a href="https://doi.org/10.1038/s41592-019-0344-8">10.1038/s41592-019-0344-8</a>.</p>
+</div>
 </div>
 </div>
 
