@@ -61,7 +61,6 @@ rmarkdown::render(file.path(getwd(),"doc/temp.Rmd"),
            toc_depth = 3,
            toc_float = list(collapsed = TRUE, smooth_scroll = TRUE)),
        intermediates_dir = NULL,
-       knit_root_dir = NULL, runtime = c("auto", "static", "shiny",
-                                         "shiny_prerendered"), clean = TRUE, params = NULL,
+       knit_root_dir = NULL, runtime = c("auto"), clean = TRUE, params = NULL,
        knit_meta = NULL, envir = parent.frame(), run_pandoc = TRUE,
        quiet = FALSE, encoding = "UTF-8")
